@@ -5,6 +5,9 @@
   --blanco: #fff;
   --rojo: #881014;
   --oscuro: #000;
+  --face: #167deb;
+  --twi: #35bbfd;
+  --insta: #a733ab;
   --titulos: "Arima Madurai", cursive;
   --parrafos: "Mulish", sans-serif;
   scroll-behavior: smooth;
@@ -45,6 +48,8 @@ a {
   position: fixed;
   background-color: #000;
   box-shadow: 5px 5px 5px rgb(41, 41, 41);
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 img {
@@ -90,6 +95,8 @@ img {
 
 .btn-cerrar:hover {
   cursor: pointer;
+  color: var(--verde);
+  transform: scale(1.2);
 }
 
 .btn {
@@ -140,6 +147,7 @@ img {
 /*encabezado*/
 .contenedor-navegacion {
   background-color: var(--oscuro);
+  position: relative;
   z-index: 5;
 }
 .contenido-navegacion {
@@ -169,7 +177,9 @@ img {
     text-align: left;
   }
 }
-
+.navegacion a:hover {
+  transform: scale(1.1);
+}
 .navegacion a:nth-child(even):hover {
   color: var(--rojo);
 }
@@ -465,7 +475,10 @@ video {
   font-size: 4rem;
   font-family: var(--titulos);
 }
-
+.informacion-contacto address {
+  color: var(--blanco);
+  font-size: 2.2rem;
+}
 .informacion-contacto p {
   font-size: 2.2rem;
 }
@@ -528,6 +541,9 @@ video {
 .info h3 {
   font-size: 2.2rem;
 }
+.info address {
+  color: var(--blanco);
+}
 .info p {
   font-size: 1.8rem;
 }
@@ -556,4 +572,13 @@ video {
   color: var(--blanco);
   padding: 2rem;
   font-size: 2rem;
+}
+.facebook:hover {
+  color: var(--face);
+}
+.twitter:hover {
+  color: var(--twi);
+}
+.instagram:hover {
+  color: var(--insta);
 }

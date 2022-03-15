@@ -9,6 +9,7 @@ const btnPasta = document.querySelector(".pasta");
 const btnPizza = document.querySelector(".pizza");
 const btnPostres = document.querySelector(".postres");
 const contenedorPlatillos = document.querySelector(".platillos");
+const enlaces = document.querySelectorAll(".navegacion a");
 document.addEventListener("DOMContentLoaded", () => {
   eventos();
   platillos();
@@ -119,38 +120,23 @@ const mostrarPlatillos = (ensaladas, pastas, pizzas, postres, todos) => {
   });
 };
 
-//
-//
-
 function navegacionFija() {
-  const barra = document.querySelector(".contenedor-navegacion");
+  const barra = document.querySelector(".contenido-navegacion");
   const nosotros = document.querySelector(".contenedor-nosotros");
   window.addEventListener("scroll", function () {
     if (nosotros.getBoundingClientRect().top < 0) {
       barra.classList.add("fijo");
+      barra.classList.remove("contenedor");
       console.log("fijo");
     } else {
       barra.classList.remove("fijo");
+      barra.classList.add("contenedor");
       console.log("nofijo");
     }
   });
-  //   // Registrar el Intersection Observer
-  //   const observer = new IntersectionObserver(function (entries) {
-  //     if (entries[0].isIntersecting) {
-  //
-  //     } else {
-  //       barra.classList.add("fijo");
-  //     }
-  //   });
-  //   console.log(observer);
-
-  //   // Elemento a observar
-  //   observer.observe(document.querySelector(".video"));
 }
 
 function scrollNav() {
-  const enlaces = document.querySelectorAll(".navegacion a");
-
   enlaces.forEach(function (enlace) {
     enlace.addEventListener("click", function (e) {
       e.preventDefault();
